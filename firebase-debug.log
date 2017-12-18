@@ -1,0 +1,65 @@
+[debug] [2017-12-18T08:37:49.211Z] ----------------------------------------------------------------------
+[debug] [2017-12-18T08:37:49.218Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Samuel Walker\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2017-12-18T08:37:49.220Z] CLI Version:   3.16.0
+[debug] [2017-12-18T08:37:49.221Z] Platform:      win32
+[debug] [2017-12-18T08:37:49.221Z] Node Version:  v6.11.0
+[debug] [2017-12-18T08:37:49.224Z] Time:          Mon Dec 18 2017 03:37:49 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-18T08:37:49.225Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-12-18T08:37:49.244Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-12-18T08:37:49.244Z] > authorizing via signed-in user
+[debug] [2017-12-18T08:37:49.247Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-12-18T08:37:49.247Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/QzRC6ZQnkWsWG_bDQ9QLiNtQZXwo40sPAI57CHI1zrLgKB2LjYtxeWlEjyeiuYHy',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Dec 18 2017 03:37:49 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-18T08:37:49.443Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-18T08:37:49.460Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/hotstourneys  
+  
+ Mon Dec 18 2017 03:37:49 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-18T08:37:50.053Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-18T08:37:50.054Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/hotstourneys/tokens  
+  
+ Mon Dec 18 2017 03:37:50 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-18T08:37:50.692Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'hotstourneys'...
+[info] 
+[info] i  deploying functions, hosting
+[debug] [2017-12-18T08:37:51.140Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "shell": "firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~5.4.2",
+    "firebase-functions": "^0.7.1"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2017-12-18T08:37:51.141Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/hotstourneys?view=CONSUMER_VIEW  
+  
+ Mon Dec 18 2017 03:37:51 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-18T08:37:51.142Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/hotstourneys?view=CONSUMER_VIEW  
+  
+ Mon Dec 18 2017 03:37:51 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-18T08:37:51.771Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2017-12-18T08:37:51.825Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-18T08:37:51.826Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/hotstourneys  
+  
+ Mon Dec 18 2017 03:37:51 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-18T08:37:51.827Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/hotstourneys/apiKeys  
+  
+ Mon Dec 18 2017 03:37:51 GMT-0500 (Eastern Standard Time)
+[debug] [2017-12-18T08:37:52.079Z] <<< HTTP RESPONSE 200
+[debug] [2017-12-18T08:37:52.257Z] <<< HTTP RESPONSE 200
