@@ -45,6 +45,16 @@
             </section>
         </div>
         
+        <div id="argumentAlert" class="alert alert-info alert-dismissible fade show" style="display:none">
+            <button type="button" class="close" data-dismiss="alert">
+                <span>&times;</span>
+            </button>
+            <section>
+                <h3 class="alert-heading">Registration Success</h3>
+                <p>You have been added to the members list. Come back soon when we finish construction!</p>
+            </section>
+        </div>
+        
         <div class="row"> 
             <section class="col-sm-4"> 
               <h3>Fair Matchmaking</h3> 
@@ -90,5 +100,12 @@
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+            var register = location.search.split('register=')[1] ? location.search.split('register=')[1] : 0
+            if(register == 1)
+            {
+                document.getElementById("argumentAlert").style.display="";
+            }
+    </script>
   </body>
 </html>

@@ -28,6 +28,16 @@
     </nav>
     <div class="container"> 
         <form>
+    <div class="container">
+        <div id="argumentAlert" class="alert alert-danger alert-dismissible fade show" style="display:none">
+            <button type="button" class="close" data-dismiss="alert">
+                <span>&times;</span>
+            </button>
+            <section>
+                <h3 id="alertheader" class="alert-heading"></h3>
+                <p id="alertbody"></p>
+            </section>
+        </div>
             <fieldset class="form-group">
                 <legend>Basic Information</legend>
 
@@ -59,8 +69,38 @@
             <button class="btn btn-primary g-recaptcha" data-sitekey="6LclkD0UAAAAANjy3bXvORBOJXUXTZ_YPhDR9dre"
 data-callback="YourOnSubmitFn" type=submit>Submit</button>
         </form>
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-    <script src="js/tether.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+      </div>
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+        <script src="js/tether.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+            console.log("Test.")
+        var failed = location.search.split('failed=')[1] ? location.search.split('failed=')[1] : -1
+        if(failed != -1)
+        {
+            document.getElementById("argumentAlert").style.display="";
+            
+            switch(failed)
+                {
+                    case "0":
+                        document.getElementById("alertheader").innerHTML = "Failed Captcha";
+                        
+                        document.getElementById("alertbody").innerHTML = "Failed to verify against the captcha."
+                        break;
+                    case "1":
+                        document.getElementById("alertheader").innerHTML = "Battletag Exists";
+                        
+                        document.getElementById("alertbody").innerHTML = "This battletag has already been registered under a different account. If you believe there has been an issue, please contact us."
+                        
+                        break;
+                    default:
+                        document.getElementById("alertheader").innerHTML = "Error Completing Registration";
+                        
+                        document.getElementById("alertbody").innerHTML = unescape(failed);
+                        break;
+                }
+        }
+    </script>
   </body>
 </html>
