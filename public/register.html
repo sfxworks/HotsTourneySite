@@ -48,9 +48,9 @@
 
                 <div class="form-group">
                     <label class="form-control-label" for="battletag">Email</label>
-                    <input class="form-control" required="true" type="email" id="email" placeholder="example@example.com">
+                    <input class="form-control" required type="email" name="email" id="email" placeholder="example@example.com">
                     <label class="form-control-label" for="password">Password</label>
-                    <input class="form-control" required="true" type="password" placeholder="Secure Password">
+                    <input name="password" class="form-control" required type="password" placeholder="Secure Password">
                 </div>
             </fieldset> 
 
@@ -59,11 +59,11 @@
 
                 <div class="form-group">
                     <label class="form-control-label" for="battletag">Battle Tag</label>
-                    <input class="form-control" required="true" type="text" id="battletag" placeholder="Your Battlenet Username">
+                    <input class="form-control" name="battletag" required type="text" id="battletag" placeholder="Your Battlenet Username">
                     <label class="form-control-label" for="playerID">Player ID</label>
-                    <input class="form-control" required="true" type="number" placeholder="Your Battlenet Player ID">
+                    <input class="form-control" name="battlenumber" required type="number" placeholder="Your Battlenet Player ID">
                     <label class="form-control-label" for="region">Active Region</label>
-                    <select class="form-control" id="region">
+                    <select class="form-control" name="region" id="region">
                         <option value="US">US</option>
                         <option value="EU">EU</option>
                         <option value="KR">KR</option>
