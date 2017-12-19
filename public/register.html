@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Register</title>
   <script src='https://www.google.com/recaptcha/api.js'></script>
+ <script>
+   function onSubmit(token) {
+     document.getElementById("registrationform").submit();
+   }
+ </script>
 
   </head>
   <body>
@@ -26,8 +31,6 @@
         </form>
       </div>
     </nav>
-    <div class="container"> 
-        <form>
     <div class="container">
         <div id="argumentAlert" class="alert alert-danger alert-dismissible fade show" style="display:none">
             <button type="button" class="close" data-dismiss="alert">
@@ -38,6 +41,8 @@
                 <p id="alertbody"></p>
             </section>
         </div>
+        
+        <form id="registrationform" method="post" action="https://us-central1-hotstourneys.cloudfunctions.net/register">
             <fieldset class="form-group">
                 <legend>Basic Information</legend>
 
@@ -66,8 +71,12 @@
                     </select>
                 </div>
             </fieldset>
-            <button class="btn btn-primary g-recaptcha" data-sitekey="6LclkD0UAAAAANjy3bXvORBOJXUXTZ_YPhDR9dre"
-data-callback="YourOnSubmitFn" type=submit>Submit</button>
+            <button
+                class="btn btn-primary g-recaptcha"
+                data-sitekey="6LclkD0UAAAAANjy3bXvORBOJXUXTZ_YPhDR9dre"
+                data-callback="onSubmit">
+                Submit
+                </button>
         </form>
       </div>
         <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
