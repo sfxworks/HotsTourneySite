@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Login</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse bg-primary navbar-toggleable-sm mb-4">
+      <div class="container">
+        <a href="/index.html" class="navbar-brand">Hots Tournys</a>
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link " href="/index.html">Home</a>
+            <a class="nav-item nav-link " href="/members.html">Members</a>
+            <a class="nav-item nav-link disabled" href="#">Teams</a>
+            <a class="nav-item nav-link disabled" href="#">Tournaments</a>
+        </div>
+        <form class="form-inline">
+            <a class="btn btn-info mr-2" href="/login.html">Login</a>
+            <a class="btn btn-warning" href="/register.html">Register</a>
+        </form>
+      </div>
+    </nav>
+    <div class="container"> 
+        <form>
+            <fieldset class="form-group">
+                <legend>Login</legend>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="battletag">Email</label>
+                    <input class="form-control" required="true" type="email" id="email" placeholder="">
+                    <label class="form-control-label" for="password">Password</label>
+                    <input class="form-control" required="true" type="password" placeholder="">
+                </div>
+            </fieldset> 
+            <button class="btn btn-primary g-recaptcha" data-sitekey="6LclkD0UAAAAANjy3bXvORBOJXUXTZ_YPhDR9dre"
+data-callback="YourOnSubmitFn" type=submit>Login</button>
+        </form>  
+    </div>  
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
